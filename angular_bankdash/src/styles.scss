@@ -1,0 +1,389 @@
+// GLOBAL STYLE
+// font family
+@import url('https://fonts.cdnfonts.com/css/anek-bangla');
+@import 'sweetalert2/src/sweetalert2.scss';
+// body.swal2-shown > [aria-hidden='true'] {
+//   transition: 0.1s filter;
+//   filter: none;
+// }
+body.swal2-shown {
+  overflow: visible;
+}
+
+body.swal2-shown .swal2-backdrop {
+  display: none !important;
+}
+// Colors
+.text-danger {
+  color: var(--text-danger);
+}
+.text-info {
+  color: var(--text-info);
+}
+.text-success {
+  color: var(--text-success);
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+.main-family {
+  font-family: "Anek Bangla", sans-serif;
+}
+.ml-1 {
+  margin-left: .3rem;
+}
+.float-right {
+  float: right;
+  position: absolute;
+  right: 0;
+  margin-right: 3.7rem;
+  margin-top: 0.3rem;
+}
+.radiused {
+  border-radius: 1.5rem;
+}
+.ligne-verticale {
+  width: 2px;
+  height: 100px;
+  background-color: #B4B4B4;
+}
+.centered {
+  text-align: center;
+  align-self: center;
+}
+.pointer {
+  cursor: pointer;
+}
+
+/* Start Solde Compte Card */
+.principal_account {
+  // color: #333;
+  margin-top: 1.35rem;
+  transform: scale(1.1);
+  padding: 1.6rem .9rem;
+  font-family: 'Anek Bangla', sans-serif;
+  text-align: center;
+  align-self: center;
+  padding: .25rem;
+
+  .bank-icon {
+    color: #c1002d;
+  }
+  .account_type {
+    text-align: center;
+  }
+
+  .account-number {
+    font-weight: bold;
+    color: #000;
+    margin-top: 5px;
+  }
+
+  .balance {
+    font-size: 36px;
+    font-weight: 900;
+    color: #22283B;
+    margin: 10px 0;
+    font-family: 'Anek Bangla', serif;
+  }
+
+  .currency {
+    font-size: 16px;
+  }
+
+  .date {
+    font-size: 12px;
+    color: #777;
+  }
+}
+
+.indicator {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.indicator span {
+  width: 8px;
+  height: 8px;
+  margin: 0 3px;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+.indicator .active {
+  background: #c1002d;
+}
+/* End Solde Compte Card */
+
+// Custom nav items (Mes contracts)
+.custom-nav-tabs {
+  background: #d9d9d945;
+  border-radius: 1rem;
+  height: 2.55rem;
+}
+.custom-nav-item {
+  margin-left: 0.25rem;
+  align-self: center;
+  text-decoration: none;
+  z-index: 999;
+}
+
+@media screen and (max-width: 768px) {
+  .custom-nav-item .nav-link {
+    padding: 0.5rem .5rem;
+    color: var(--text-black);
+    min-width: 100%;
+  }
+}
+.custom-nav-item .nav-link {
+  padding: 0.5rem 1rem;
+  color: var(--text-black);
+  min-width: 100%;
+}
+.custom-nav-item .nav-link:hover {
+  color: var(--text-black);
+}
+.custom-nav-item .nav-link.active {
+  background: #ffffff;
+  color: var(--text-black);
+  box-shadow: 0 0 2px #00000040;
+  border-radius: 1rem;
+  // padding: .5rem 1.5rem;
+  text-decoration: none;
+  text-transform: none;
+}
+
+// My cards
+.carte-item {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  background: red;
+  padding: 0.65rem;
+  width: 100%;
+  height: 210px;
+  background: url(../public/assets/img/card_frame.png) #92384b;
+  color: #fff;
+  border-radius: 15px;
+  margin-right: .5rem;
+
+  .carte-type {
+    text-align: right;
+    font-weight: 500;
+    margin-right: 5rem;
+    font-size: 1.4rem;
+    margin-top: -0.2rem;
+  }
+  .carte-level {
+    margin-top: 1.5rem;
+    font-weight: 300;
+  }
+  .carte-number, .carte-date, .carte-cvv {
+    margin-top: 5rem;
+    position: absolute;
+    font-weight: 500;
+    font-size: 11px;
+  }
+  .carte-number {
+    font-size: 24px;
+  }
+  .carte-date, .carte-cvv {
+    margin-top: 8rem;
+    .value {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+  .carte-cvv {
+    margin-left: 7rem;
+  }
+}
+
+.card-title {
+  height: 15px;
+  top: 143px;
+  margin-left: 20px;
+  font-size: 16px;
+}
+.card-actions .action .card-bordered {
+  border: 1px solid #1d293980;
+  border-radius: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.55rem;
+  padding-top: 0.625rem;
+  margin-top: -2rem;
+  width: 110px;
+}
+.card-actions .action .card-bordered:hover {
+  cursor: pointer;
+  transition: 0.3s all;
+  transform: scale(0.95);
+  border: 1px solid var(--btn-main);
+}
+.card-actions .action img {
+  align-self: center;
+  margin-left: 0.9rem;
+  width: 24px;
+}
+.card-actions .action h5 {
+  font-family: "Anek Bangla";
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 7px;
+}
+// End My card list
+
+// Start Benficaire
+.beneficiaires-list {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.beneficiaire-item {
+  background-color: #eee;
+  // color: #555;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  // height: 70px;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.beneficiaires-list .btn-light {
+  background: #fff;
+  border: 1px solid lightgray;
+}
+.beneficiaires-list .btn-light:hover {
+  color: var(--text-white);
+  background: var(--btn-main);
+  transition: 0.3s ease-in-out;
+}
+// End beneficaire
+
+// Start Transaction history
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  font-size: 0.9em;
+  padding-right: 1rem;
+}
+
+.transaction-item:last-child {
+  border-bottom: none;
+}
+
+.transaction-details {
+  display: flex;
+  align-items: center;
+}
+
+.transaction-icon {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #ddd; /* Placeholder */
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  color: #777;
+}
+.transaction-icon img {
+  margin-right: 0.25rem;
+  width: 53px;
+  //   height: 25px;
+}
+
+.transaction-info {
+  flex-grow: 1;
+  margin-left: 1rem;
+}
+
+.transaction-info > div {
+  font-weight: 600;
+}
+
+.transaction-date {
+  color: #777;
+  font-size: 0.8em;
+}
+
+.transaction-amount {
+  font-weight: bold;
+  color: #333;
+}
+
+.transaction-amount.negative {
+  color: #e44d26;
+}
+
+.transaction-amount.positive {
+  color: var(--text-success);
+}
+// ENd transaction history
+
+// Start Contrat
+.contracts table th {
+  color: var(--table-header-text);
+  // border-radius: 25px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.title-22 {
+  font-size: 22px;
+}
+
+.associte_contract, .light-main-btn {
+  background: var(--main-color-light);
+  padding: 0.1rem 0.5rem;
+  border-radius: 10px;
+}
+.associte_contract button, .light-main-btn butto{
+  color: var(--btn-main);
+  border: none;
+  padding: 0.55rem 0.35rem;
+  background: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+// End Contrat
+
+// Some responsive
+
+// Start OTP input
+// ngx-otp-input {
+//   .ngx-otp-input-form {
+//     border: 1px solid red;
+//     width: 100%;
+//   }
+//   .ngx-otp-input-box {
+//     width: 549px;
+//     height: 47px;
+//   }
+
+// }
+.otp-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+// ENd OTP input
+
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,18 @@
+<div class="card p-4">
+  <form #otpForm="ngForm" (ngSubmit)="validateSendingMoney()">
+    <h3 class="text-center">Confirmation transaction</h3>
+    <div class="card-body p-4">
+      <h6>Renseignez le code reçu par SMS</h6>
+      <div class="otp">
+        <ng-otp-input
+        (onInputChange)="onOtpChange($event)"
+        [config]="config"
+        ></ng-otp-input>
+      </div>
+      <div class="ccard-footer mt-5 centered">
+        <h6>Renvoyer le code dans <app-count-down [timeLeft]="60"></app-count-down> </h6>
+        <button class="btn btn-main" [disabled]="otpForm.invalid || !canSent" type="submit">Valider</button>
+      </div>
+    </div>
+  </form>
+</div>

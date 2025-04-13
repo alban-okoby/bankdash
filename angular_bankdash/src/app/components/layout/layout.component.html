@@ -1,0 +1,36 @@
+<!-- Sidebar Menu start -->
+<nav class="pc-sidebar">
+  <div class="navbar-wrapper">
+    <div class="m-header">
+      <a href="#" class="b-brand text-primary">
+        <span class="badge bg-light-dange rounded-pill ms-2 theme-version" style="font-size: 1.5rem"><img src="assets/img/logo.png" alt="BankDash"></span>
+      </a>
+    </div>
+    <app-sidebar></app-sidebar>
+    
+  </div>
+</nav>
+<!-- Sidebar Menu end -->
+
+<!-- Header Topbar start -->
+<header class="pc-header">
+  <div class="header-wrapper"> 
+    <!-- start Mobile Media Block -->
+    <div class="me-auto pc-mob-drp">
+      <app-sidebar-collapse [headerTitle]="currentTitle"></app-sidebar-collapse>
+    </div>
+    <!-- End Mobile Media Block -->
+
+    <app-navbar></app-navbar>
+  </div>
+</header>
+<!-- Header end -->
+
+
+<!-- Main Content start -->
+<div class="pc-container">
+  <div class="pc-content">
+      <router-outlet />
+  </div>
+</div>
+<!-- Main Content end -->

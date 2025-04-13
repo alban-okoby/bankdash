@@ -1,0 +1,42 @@
+.card {
+  background-color: white;
+  margin-bottom: 0;
+  width: 662;
+  height: 379;
+  border-radius: 20px;
+
+  .card-body h6 {
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    color: #475467;
+    display: flex;
+    justify-content: center;
+
+  }
+  .ccard-footer {
+    .btn{
+      width: 15rem;
+      border-radius: 10px;
+    }
+    .btn.disabled{
+      background-color: orange;
+    }
+  }
+  .centered {
+    text-align: center;
+    align-self: center;
+  }
+  .otp {
+    margin-left: 3rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    .otp {
+      align-self: center;
+      margin-left: -1.3rem;
+    }
+  }
+}
+

@@ -1,0 +1,78 @@
+<div class="row">
+  <div class="col-lg-8 mt-3">
+    <h5 class="mb-2 title-22"> <span class="text-muted pointer" [routerLink]="'/'+routes.MY_ACCOUNTS">
+        < Mes comptes |</span> Transferer de l'argent</h5>
+    <!-- Account details -->
+    <div class="card p-3">
+      <div class="transfer-container">
+        <div class="account-info">
+          <div class="d-flex">
+            <span class="bank-icon">
+              <img src="assets/img/bank_img.png" alt="">
+            </span>
+            <div class="account-name">
+              <span class="account-label">Libellé compte</span> <br>
+              <span class="account_type">Compte courant - Principal</span>
+            </div>
+          </div>
+          <div class="account-details">
+            <span>Mon solde</span>
+            <h4 class="balance">12 670 550 XOF</h4>
+          </div>
+        </div>
+
+        <div class="transfer-options">
+          <button class="transfer-option active"> <i class="fa fa-wallet wallet-icon"></i> Virement compte à compte</button>
+          <button class="transfer-option"> <i class="ti ti-user mr-3"></i> Virement vers un bénéficiaire</button>
+        </div>
+
+        <div class="account-selection">
+          <div class="account-item">
+            <div class="account-name">Compte épargne</div>
+            <div class="account-number">TG009 01285 1098009013525</div>
+            <div class="account-amount">1 310 000 XOF</div>
+          </div>
+          <div class="selections-container">
+            <div class="selection-arrows">&lt;</div>
+            <div class="selection-arrows">&gt;</div>
+          </div>
+          <div class="account-item">
+            <div class="account-name">Compte Enfant</div>
+            <div class="account-number">TG009 01285 1098009013525</div>
+            <div class="account-amount">873 750 XOF</div>
+          </div>
+        </div>
+
+        <div class="transfer-form">
+          <div class="form-container">
+            <div class="form-group">
+              <label for="motif">Saisir le motif du virement</label>
+              <input type="text" id="motif" name="motif">
+            </div>
+            <div class="form-group">
+              <label for="montant">Saisir le montant du virement</label>
+              <input type="number" id="montant" name="montant">
+            </div>
+          </div>
+          <div class="form-check form-switch form-check-reverse m-0">
+            <label for="recurrent">Virement récurrent ?</label>
+            <input id="recurrent" class="form-check-input f-18 " type="checkbox" role="switch" />
+          </div>
+          <button class="btn-main" (click)="openSendMoneyDialog()">Valider</button>
+          <div class="images">
+            <img src="assets/img/man_african.png" alt="" class="img-left">
+            <img src="assets/img/femme_sm.png" alt="" class="img-right">
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- End Send money main -->
+  </div>
+
+  <!-- Right section -->
+  <div class="col-lg-4" style="margin-top: -1.5rem; padding: .15rem; overflow: hidden;">
+    <app-right-section-cards></app-right-section-cards>
+  </div>
+</div>
+<!-- End right section -->

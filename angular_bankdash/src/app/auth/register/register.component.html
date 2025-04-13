@@ -1,0 +1,61 @@
+<section>
+  <div class="signup-container">
+    <div class="signup-form">
+      <h1>Inscription à <span>QuanPay</span></h1>
+      <p>Rejoignez-nous et commencez à gérer vos paiements en toute sécurité et simplicité.</p>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="group col-md-6">
+            <label for="name">Nom complet</label> <br>
+            <input type="text" id="name" placeholder="Entrez votre nom complet" required formControlName="name"
+            >
+          </div>
+          <div class="group col-md-6">
+            <label for="username">Nom d'utilisateur</label> <br>
+            <input type="text" id="username" placeholder="Choisissez un nom d'utilisateur" required
+              formControlName="username">
+          </div>
+          <div class="group col-md-6">
+            <label for="email">Email</label> <br />
+            <input type="email" id="email" placeholder="Entrez votre adresse email" required formControlName="email"
+            >
+          </div>
+          <div class="group col-gap-6 col-md-6">
+            <label for="displayName">Nom d'affichage</label> <br>
+            <input type="text" id="displayName" placeholder="Choisissez un nom d'affichage" required
+            formControlName="displayName">
+          </div>
+          <div class="group col-md-6">
+            <label for="password">Mot de passe</label><br>
+            <input type="password" id="password" placeholder="Entrez un mot de passe" required
+            formControlName="password">
+          </div>
+          <div class="group col-md-6">
+            <label for="matchingPassword">Confirmez le mot de passe</label> <br>
+            <input type="password" id="matchingPassword" placeholder="Confirmez votre mot de passe" required
+            formControlName="matchingPassword">
+          </div>
+        </div>
+        <div class="row">
+          <div class="group col-md-6">
+            <label for="about">À propos de vous</label> <br>
+            <textarea id="about" placeholder="Dites-nous en plus sur vous" required formControlName="about"
+            ></textarea>
+          </div>
+            <div class="group col-md-6 mt-4">
+              <button type="submit" class="btn btn-main" [disabled]="form.invalid || submitted">S'inscrire</button>
+            </div>
+      </div>
+        </form>
+      <div class="centered mt-3 font-size-18">
+        <a href="javascript:void(0)" class="link text-center" routerLink="/auth/signin">Déjà un compte ? <span>  Se connecter <i class="fa fa-right-to-bracket"></i></span>  </a>
+      </div>
+    </div>
+
+    <div class="signup-image">
+      <img src="assets/img/femme.png" alt="Image d'inscription">
+      <div class="c_container">
+      </div>
+    </div>
+  </div>
+</section>

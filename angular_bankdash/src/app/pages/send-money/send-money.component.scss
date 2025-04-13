@@ -1,0 +1,207 @@
+.account-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background: #f9f9f9;
+  padding: 0.5rem 0.725rem;
+  border-radius: var(--radius-card-20);
+
+  .account-name {
+    margin-left: 1rem;
+  }
+
+  .account-label {
+    color: var(--text-black);
+    font-size: 0.9em;
+    font-weight: 500;
+  }
+
+  .account-details {
+    font-family: "Anek Bangla";
+    display: flex;
+    flex-direction: column;
+    padding-right: 7rem;
+
+    & > span {
+      color: var(--text-black);
+      font-size: 1rem;
+    }
+    .balance {
+      font-weight: 700;
+      color: var(--text-bold-color);
+      font-size: 24px;
+    }
+  }
+}
+
+.transfer-options {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+
+  .transfer-option {
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+    text-align: center;
+    flex-grow: 1;
+    border: none;
+
+    &.active {
+      color: var(--pc-sidebar-active-color);
+      border-bottom: .3rem solid var(--pc-sidebar-active-color);
+    }
+  }
+}
+
+.account-selection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.account-item {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  width: 48%;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.account-item:hover {
+  border-color: var(--pc-sidebar-active-color);
+}
+
+.account-name {
+  color: #333;
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.account-number {
+  color: #777;
+  font-size: 0.8em;
+  margin-bottom: 5px;
+}
+
+.account-amount {
+  color: #555;
+  font-size: 0.9em;
+}
+.selections-container {
+  .selection-arrows {
+    color: var(--main-color-light);
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+}
+
+.transfer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 7rem;
+  .images {
+    margin-top: 5rem;
+  }
+  .img-left,
+  .img-right {
+    position: absolute;
+    max-width: 15rem;
+    bottom: 0;
+    margin-top: 6rem;
+    height: 309px;
+    // width: 200px;
+  }
+  .img-left {
+    align-self: flex-start;
+    left: 0;
+  }
+  .img-right {
+    align-self: flex-end;
+    right: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    .img-left,
+    .img-right {
+      width: 100%;
+      max-width: 15rem;
+      height: auto;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .img-left,
+    .img-right {
+      width: 110px;
+    }
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group label {
+    color: #555;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+
+  .form-group input:focus {
+    outline: none;
+    border-color: #d30c12;
+  }
+  .form-container {
+    width: 18rem;
+    align-self: center;
+  }
+
+  .recurring-transfer {
+    display: flex;
+    align-items: center;
+  }
+
+  .recurring-transfer label {
+    margin-left: 10px;
+  }
+}
+
+.btn-main {
+  border: none;
+  padding: 8px 0px;
+  width: 8rem;
+  border-radius: 12px;
+  font-size: 1em;
+  text-align: center;
+  align-items: center;
+  align-self: center;
+  transition: background-color 0.3s ease;
+}
+.form-check {
+  align-self: center;
+  .form-check-input {
+    margin-top: -0.1rem;
+  }
+}
