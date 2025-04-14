@@ -10,6 +10,10 @@ import { PersonnalFinancesComponent } from './pages/personnal-finances/personnal
 import { Routes  as StaticRoute }  from './core/routes/routes';
 import { MyprofileComponent } from './pages/myprofile/myprofile.component';
 import { SendMoneyComponent } from './pages/send-money/send-money.component';
+import { ServicesComponent } from './pages/services/services.component';
+import { LoansComponent } from './pages/loans/loans.component';
+import { PrivilegesComponent } from './pages/privileges/privileges.component';
+import { NoAuthNeedGuard } from './auth/guard/logged.guard';
 
 const staticRoutes : StaticRoute = new StaticRoute();
 export const routes: Routes = [
@@ -23,31 +27,36 @@ export const routes: Routes = [
         data: { title: 'Tableau de bord' }, title: 'Tableau de bord'
       },
       {
-        path: staticRoutes.MY_ACCOUNTS, component: AccountComponent,
+        path: staticRoutes.MY_TRANSACTIONS.path, 
+        component: SendMoneyComponent,
+        data: { title: 'Mes transactions' }, title: 'Mes transactions'
+      },
+      {
+        path: staticRoutes.INVESTMENTS.path, component: MyassurancesComponent,
+        data: { title: 'Investissements' }, title: 'Investissements'
+      },
+      {
+        path: staticRoutes.LOANS.path, component: LoansComponent,
+        data: { title: 'Credits' }, title: 'Credits'
+      },
+      {
+        path: staticRoutes.MY_ACCOUNTS.path, component: AccountComponent,
         data: { title: 'Mes comptes' }, title: 'Mes comptes'
       },
       {
-        path: staticRoutes.MY_ACCOUNTS_SEND_MONEY, component: SendMoneyComponent,
-        data: {title: 'Envoyer de l\'argent'}, title: 'Envoyer de l\'argent'
-      }, 
-      {
-        path: staticRoutes.MY_ASSURANCES, component: MyassurancesComponent,
-        data: { title: 'Mes assurances' }, title: 'Mes assurances'
-      },
-      {
-        path: staticRoutes.MY_CARDS, component: MycardsComponent,
+        path: staticRoutes.MY_CARDS.path, component: MycardsComponent,
         data: { title: 'Mes cartes' }, title: 'Mes cartes'
       },
       {
-        path: staticRoutes.MY_FINANCES, component: PersonnalFinancesComponent,
-        data: { title: 'Finances personnelles' }, title: 'Finances personnelles'
+        path: staticRoutes.SERVICES.path, component: ServicesComponent,
+        data: { title: 'Services' }, title: 'Services'
       },
       {
-        path: staticRoutes.DEVISES_EXCHANGES, component: DevicesExchangesComponent,
-        data: { title: 'Devises & Changes' }, title: 'Devises & Changes'
+        path: staticRoutes.MY_PRIVILEGES.path, component: PrivilegesComponent,
+        data: { title: 'Privilèges' }, title: 'Privilèges'
       },
       {
-        path: staticRoutes.MY_PROFILE, component: MyprofileComponent, 
+        path: staticRoutes.MY_PROFILE.path, component: MyprofileComponent, 
         data: { title: 'Mon profil' }, title: 'Mon profil'
       },
     ]

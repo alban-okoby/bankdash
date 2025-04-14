@@ -2,17 +2,18 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100vh !important;
   font-family: Arial, sans-serif;
   margin: 0;
   background-color: white;
   overflow-y: hidden;
+  border: 1px solid red;
 }
 
 .signup-container {
   display: flex;
   width: 80%;
-  height: 79vh;
+  height: 79vh  !important;
   box-shadow: 0 10px 20px #2323231a;
   border-radius: 2.5rem;
   background: rgba(255, 255, 255, 0.8);
@@ -39,7 +40,7 @@ section {
 }
 
 .signup-form h1 span {
-  color: #c6183d;
+  color: var(--btn-main);
 }
 
 .signup-form p {
@@ -73,7 +74,7 @@ section {
 .signup-form button {
   margin-top: 20px;
   padding: 10px;
-  background: #c6183d;
+  background: var(--btn-main);
   color: white;
   border: none;
   border-radius: 10px;
@@ -83,7 +84,7 @@ section {
 }
 
 .signup-form button:hover {
-  background: #df2c53;
+  background: var(--btn-main-hover);
 }
 .signup-form > .centered a {
   font-size: 22px;
@@ -106,7 +107,7 @@ section {
 }
 
 .signup-image img {
-  height: 90vh;
+  height: 90vh !important;
   position: absolute;
   z-index: 999;
   object-fit: cover;
@@ -170,6 +171,7 @@ section {
         background-size: cover;
         padding-bottom: 0;
         margin-bottom: 8.5rem;
+        z-index: 999;
       }
     }
   }

@@ -3,23 +3,24 @@ import { catchError, Observable, throwError } from 'rxjs';
 import { AuthService } from '../service/auth.service';
 import { HttpErrorResponse, HttpEvent, HttpHandler, HttpRequest } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { NotificationService } from '../../core';
+import { NotificationService, StaticRoutes } from '../../core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthInterceptor {
+export class LoggedInterceptor {
+  private routes: StaticRoutes = new StaticRoutes()
 
   constructor(private authService: AuthService, private router: Router, private notifService: NotificationService) { }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     return next.handle(req).pipe(
       catchError((error: HttpErrorResponse) => {
-        if (error.status === 401 && !req.url.includes('auth')) {
-          this.notifService.showErrorMessage('Token invalide ou expiré. Déconnexion en cours...');
+        if (error.status != 401 && req.url.includes('auth')) {
+          this.notifService.showSuccessMessage('Bon retour sur BankDash. Redirection à votre compte ...');
           setTimeout(() => {
-            this.authService.logout();
-          }, 1000);
+            this.router.navigate([this.routes.DASHBOARD]);
+          }, 700);
         }
         return throwError(() => error);
       })

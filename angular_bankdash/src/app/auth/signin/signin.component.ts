@@ -46,14 +46,11 @@ export class SigninComponent {
     this.creatSignInForm();
   }
 
-  // get f() {
-  //   return this.form.controls;
-  // }
 
   creatSignInForm() {
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     this.form = this.formBuilder.group({
-      email: [this.loginModel.email, [Validators.pattern(emailPattern)]],
+      email: [this.loginModel.email, [Validators.pattern(emailPattern), Validators.required]],
       password: [this.loginModel.password, [Validators.required]],
       // resolved: [this.loginModel.resolved, [Validators.requiredTrue]],
     });
@@ -118,6 +115,9 @@ export class SigninComponent {
           if (err && err.error && err.error.message) {
             if (err.error.message.toLowerCase().includes("disabled")) {
               this.notificationService.showErrorMessage("Vous devez confirmer votre messagerie avant de pouvoir vous connecter");
+            }
+            if (err.error.message.toLowerCase().includes("credentials")) {
+              this.notificationService.showErrorMessage("Identifiants incorrects");
             } else {
               this.notificationService.showErrorMessage(err.error.message); 
             }
@@ -127,20 +127,6 @@ export class SigninComponent {
           console.log(err);
         }, 1100);
       }
-    });
-  }
-  
-
-    /**
-   * badCredentials : Message en cas d'identifiants incorrects
-   * @return Nothing
-   */
-  badCredentials() {
-    Swal.fire({
-      icon: 'error',
-      title: 'Oops... !',
-      timer: 3000,
-      text: 'Identifiants incorrects !',
     });
   }
 

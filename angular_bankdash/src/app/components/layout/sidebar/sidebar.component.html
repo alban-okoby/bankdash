@@ -12,58 +12,80 @@
       </a>
     </li>
     <li class="pc-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-      <a class="pc-link" [routerLink]="routes.MY_ACCOUNTS">
+      <a class="pc-link" [routerLink]="routes.MY_TRANSACTIONS.route">
+        <div class="borderedme"></div>
+        <span class="pc-micon"> 
+          <i class="fa-solid fa-money-bill-transfer"></i>
+        </span>
+        <span class="pc-mtext">Transfert</span>
+      </a>
+    </li>
+    <li class="pc-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a class="pc-link" [routerLink]="routes.MY_ACCOUNTS.route">
+        <div class="borderedme"></div>
+        <span class="pc-micon"> 
+          <i class="fa-solid fa-credit-card"></i>
+        </span>
+        <span class="pc-mtext">Activités Comptes</span>
+      </a>
+    </li>
+    <li class="pc-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+    <a class="pc-link" [routerLink]="routes.INVESTMENTS.route">
         <div class="borderedme"></div>
         <span class="pc-micon"> 
           <svg class="pc-icon">
             <use xlink:href="#custom-fatrows"></use>
           </svg>
         </span>
-        <span class="pc-mtext">Mes comptes</span>
+        <span class="pc-mtext">Investissements</span>
       </a>
     </li>
     <li class="pc-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-      <a href="javascript:void(0)" class="pc-link" [routerLink]="routes.MY_ASSURANCES">
+      <a href="javascript:void(0)" class="pc-link" [routerLink]="routes.MY_CARDS.route">
         <div class="borderedme"></div>
         <span class="pc-micon">
-          <svg class="pc-icon">
-            <use xlink:href="#custom-presentation-chart"></use>
-          </svg>
-        </span>
-        <span class="pc-mtext">Mes assurances</span></a>
-    </li>
-    <li class="pc-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-      <a href="javascript:void(0)" class="pc-link" [routerLink]="routes.MY_CARDS">
-        <div class="borderedme"></div>
-        <span class="pc-micon">
-          <svg class="pc-icon">
-            <use xlink:href="#custom-24-support"></use>
-          </svg>
+          <i class="fa-solid fa-credit-card"></i>
         </span>
         <span class="pc-mtext">Mes cartes</span>
       </a>
     </li>
     <li class="pc-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-      <a href="javascript:void(0)" class="pc-link" [routerLink]="routes.MY_FINANCES">
+      <a href="javascript:void(0)" class="pc-link" [routerLink]="routes.LOANS.route">
+        <div class="borderedme"></div>
+        <span class="pc-micon">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+        </span>
+        <span class="pc-mtext">Credits</span></a>
+    </li>
+    <li class="pc-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a href="javascript:void(0)" class="pc-link" [routerLink]="routes.SERVICES.route">
+        <div class="borderedme"></div>
+        <span class="pc-micon">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+        </span>
+        <span class="pc-mtext">Services</span></a>
+    </li>
+    <li class="pc-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a href="javascript:void(0)" class="pc-link" [routerLink]="routes.MY_PRIVILEGES.route">
         <div class="borderedme"></div>
         <span class="pc-micon ">
           <i class="fa fa-coins"></i>
         </span>
-        <span class="pc-mtext">Finances personnelles</span>
+        <span class="pc-mtext">Privilèges</span>
       </a>
     </li>
     <li class="pc-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-      <a href="javascript:void(0)" class="pc-link" [routerLink]="routes.DEVISES_EXCHANGES">
+      <a href="javascript:void(0)" class="pc-link" [routerLink]="routes.MY_PROFILE.route">
         <div class="borderedme"></div>
-        <span class="pc-micon">
-          <i class="fa-solid fa-rotate"></i>
+        <span class="pc-micon ">
+          <i class="fa fa-gear"></i>
         </span>
-      <span class="pc-mtext">Devises & Changes</span>
-    </a>
+        <span class="pc-mtext">Paramètres</span>
+      </a>
     </li>
-    <ul class="nav-bottom">
+    <!-- <ul class="nav-bottom">
       <li class="pc-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-        <a href="javascript:void(0)" class="pc-link" [routerLink]="routes.MY_PROFILE">
+        <a href="javascript:void(0)" class="pc-link" [routerLink]="routes.MY_PROFILE.path">
           <div class="borderedme"></div>
           <span class="pc-micon">
             <i class="ti ti-user"></i>
@@ -79,6 +101,6 @@
           </span>
           <span class="logout-text">Se déconnecter</span></a>
       </li>
-    </ul>
+    </ul> -->
   </ul>
 </div>

@@ -92,7 +92,6 @@ export class AuthService {
     document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; secure; SameSite=Strict`;
   }
 
-
   logout(): void {
     localStorage.clear();
     sessionStorage.clear();

@@ -1,7 +1,7 @@
 <section>
   <div class="login-container">
     <div class="login-form">
-      <h1>Connexion à <span>QuanPay</span></h1>
+      <h1>Connexion à <span>BankDash</span></h1>
       <p>Vos paiements en toute simplicité et sécurité, au même endroit sans vous déplacer</p>
       <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <label for="email">Identifiant</label> <br>
@@ -24,8 +24,8 @@
           formControlName="password"
           [(ngModel)]="loginModel.password"
         >
-        <i (click)="onClick()" [class]=" showPassword === 'password' ? 'fa fa-eye' : 'fa fa-eye-slash'" class="show_password"></i>
-        <button type="submit" [disabled]="form.invalid || isRequesting" class="">Se connecter
+        <i (click)="onClick()" [class]="showPassword == 'password' ? 'fa fa-eye' : 'fa fa-eye-slash'" class="show_password"></i>
+        <button type="submit" [disabled]="form.invalid || isRequesting" class="btn btn-main">Se connecter
           <div *ngIf="isRequesting" class="spinner-grow text-green ml-4 float-end" color="green" role="status">
             <span class="sr-only">Loading...</span>
           </div>
@@ -37,7 +37,7 @@
     </div>
 
     <div class="login-image">
-      <img src="assets/img/femme.png" alt="Image de connexion">
+      <img src="assets/img/man_african_right_to_left.png" alt="Image de connexion">
       <div class="c_container">
       </div>
     </div>

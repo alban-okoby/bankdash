@@ -35,7 +35,7 @@ section {
       font-family: "Anek Bangla", sans-serif;
 
       span {
-        color: #c6183d;
+        color: var(--btn-main);
       }
     }
 
@@ -60,7 +60,7 @@ section {
       margin-bottom: 1rem;
       &:focus {
         outline: none;
-        border-color: #c6183d;
+        border-color: var(--btn-main);
       }
     }
     .show_password {
@@ -72,7 +72,7 @@ section {
     button {
       margin-top: 20px;
       padding: 10px;
-      background: #c6183d;
+      background: var(--btn-main);
       color: white;
       border: none;
       border-radius: 10px;
@@ -81,7 +81,7 @@ section {
       width: 26rem;
 
       &:hover {
-        background: #df2c53;
+        background: var(--btn-main-hover);
       }
     }
 
@@ -105,13 +105,13 @@ section {
     padding: 20px;
 
     img {
-      max-height: 90.5vh;
+      max-height: 97.5vh;
       position: absolute;
       z-index: 999;
       object-fit: cover;
       background-size: cover;
       padding-bottom: 3.1rem;
-      margin-bottom: 7rem;
+      margin-bottom: 1.9rem;
     }
 
     p {

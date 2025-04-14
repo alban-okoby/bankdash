@@ -8,7 +8,7 @@
           <!-- <img src="assets/img/bank_img.png" /> -->
           <i class="fa fa-solid fa-building-columns bank-icon"></i>
           <a href="#" class="text-black m-1">Libellé compte</a> <br>
-          <h2 class="">Compte courant - Principal <img src="assets/img/navigate_left.png" /><img src="assets/img/navigate_right.png" /> </h2>
+          <h2 class="">Compte courant - Principal <img src="assets/img/navigate_left.png" title="Libellé compte" /><img src="assets/img/navigate_right.png" title="Libellé compte"/> </h2>
         </div>
         <div class="account-details">
           <div class="left p-3">
@@ -46,7 +46,7 @@
         <!-- Account details actions -->
         <div class="account-actions">
           <button class="new-account btn-main"><span class="plus">+</span> Nouveau compte</button>
-          <div class="light-main-btn" [routerLink]="'/'+routes.MY_ACCOUNTS_SEND_MONEY">
+          <div class="light-main-btn">
             <button class="transfer-mon text-danger">💸 Transférer de l’argent</button>
           </div>
           <div class="light-main-btn ml-2">
