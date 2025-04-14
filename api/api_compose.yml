@@ -1,16 +1,6 @@
 version: '3.8'
 
 services:
-  web:
-      build:
-        context: angular_bankdash
-        target: builder
-      ports:
-        - 4200:4200
-      volumes:
-        - ./angular_bankdash:/angular_bankdash
-        - /angular_bankdash/node_modules
-  
   backend:
     build: api
     ports:
@@ -59,4 +49,3 @@ secrets:
 networks:
   spring-postgres:
     driver: bridge
-
